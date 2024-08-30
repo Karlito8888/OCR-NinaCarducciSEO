@@ -67,7 +67,6 @@
 		<h1 class="name" itemprop="name">Nina Carducci</h1>
 		<!-- Remplacer <div> par <nav>  -->
 		<nav class="nav" aria-label="Navigation principale">
-			<!-- Ajout des "tabindex" pour améliorer l'accessibilité -->
 			<ul>
 				<li><a href="#about" tabindex="1">À propos</a></li>
 				<li><a href="#gallery" tabindex="2">Galerie</a></li>
@@ -82,17 +81,17 @@
 	</header>
 	<!-- Remplacer la <div> en <main> -->
 	<main>
-		<!-- Remplacer la <div> en <section> - Ajout de role "region" pour contenu important, et des "aria-label" pour améliorer l'accessibilité. -->
-		<section id="header header-carousel" role="region" aria-label="Carousel" aria-live="polite">
+		<!-- Remplacer la <div> en <section> - Ajout des "aria-label" pour améliorer l'accessibilité. -->
+		<section id="header" aria-label="Carousel" aria-live="polite">
 
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-						class="active" aria-current="true" aria-label="Diapositive 1"></button>
+						class="active" aria-current="true" aria-label="Diapositive 1" tabindex="8"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-						aria-label="Diapositive 2"></button>
+						aria-label="Diapositive 2" tabindex="9"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-						aria-label="Diapositive 3"></button>
+						aria-label="Diapositive 3" tabindex="10"></button>
 				</div>
 				<div class="carousel-inner">
 					<!-- Ajout des "alt" sur chaque image afin d'améliorer l'accessibilité -->
@@ -112,12 +111,12 @@
 				<!-- Ajout des attributs aria-label pour améliorer l'accessibilité -->
 				<button aria-label="Diapositive précédente" class="carousel-control-prev" type="button"
 					data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="carousel-control-prev-icon" aria-hidden="true" tabindex="6"></span>
 					<span class="visually-hidden">Previous</span>
 				</button>
 				<button aria-label="Diapositive suivante" class="carousel-control-next" type="button"
 					data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="carousel-control-next-icon" aria-hidden="true" tabindex="7"></span>
 					<span class="visually-hidden">Next</span>
 				</button>
 			</div>
@@ -266,15 +265,15 @@
 					<!-- Ajout attributs "for" dans les balises <label> pour améliorer l'accessibilité du formulaire. -->
 					<!-- Ajout attributs "aria-required" pour les utilisateurs de lecteurs
 						d'écran. -->
-					<form action="" method="post">
+					<form action="#" method="post">
 						<label for="nom">Nom</label>
-						<input type="text" name="nom" id="nom" tabindex="1" aria-required="true">
+						<input type="text" name="nom" id="nom" aria-required="true" tabindex="16">
 						<label for="email">Email</label>
-						<input type="email" name="email" id="email" tabindex="2" aria-required="true">
+						<input type="email" name="email" id="email" aria-required="true" tabindex="17">
 						<label for="message">Message</label>
-						<textarea name="message" id="message" cols="30" rows="10" tabindex="3"
-							aria-required="true"></textarea>
-						<input type="submit" value="Envoyer" tabindex="4" />
+						<textarea name="message" id="message" cols="30" rows="10" aria-required="true"
+							tabindex="18"></textarea>
+						<input type="submit" value="Envoyer" tabindex="19" />
 					</form>
 				</div>
 				<div class="picture right">
