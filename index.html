@@ -5,7 +5,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<!-- Nous remplaçons : -->
+	<!-- <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css"> -->
+	<!-- par : -->
+	<link rel="preload" href="./assets/bootstrap/bootstrap.min.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	<!-- Utilise les versions minifiées des fichiers CSS et JavaScript -->
+	<!-- "preload" précharge le style avant que le navigateur n'ait besoin de l'appliquer. -->
+	<!-- as="style" indique que la ressource préchargée est une feuille de style. -->
+	<!-- onload="this.onload=null;this.rel='stylesheet'" modifie le rel en stylesheet une fois le fichier chargé -->
+	<!-- <noscript> assure que le style est appliquée même si JavaScript est désactivé dans le navigateur. -->
+	<noscript>
+		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	</noscript>
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +27,31 @@
 	<!-- Ajoute un favicon pour améliorer l'expérience utilisateur -->
 	<link rel="icon" href="./assets/images/icon.png" type="image/png">
 	<!-- Ajout balise <title> et <meta name="description"> pour améliorer le référencement -->
-	<title>Photographe Nina Carducci - Portfolio et Services</title>
+	<title>Nina Carducci, Photographe professionnelle à Bordeaux - Portfolio et Services</title>
 	<meta name="description"
-		content="Découvrez le portfolio de Nina Carducci, photographe professionnelle. Services de shooting, retouches, et albums photos.">
+		content="Découvrez le portfolio de Nina Carducci, photographe professionnelle à Bordeaux. Services de shooting, retouches, et albums photos.">
+	<!-- Open Graph -->
+	<meta property="og:title" content="Nina Carducci, Photographe professionnelle à Bordeaux - Portfolio et Services" />
+	<meta property="og:description"
+		content="Découvrez le portfolio de Nina Carducci, photographe professionnelle à Bordeaux. Services de shooting, retouches, et albums photos." />
+	<meta property="og:url" content="https://ninacarducci.github.io/" />
+	<meta property="og:image" content="./assets/images/nina.jpg">
+	<meta property="og:image:alt" content="Portrait de Nina Carducci, photographe professionnelle à Bordeaux" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="598" />
+	<meta property="og:site_name" content="Nina Carducci Photography" />
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_FR" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Nina Carducci, Photographe professionnelle à Bordeaux">
+	<meta name="twitter:description" content="Découvrez le portfolio de Nina Carducci, photographe professionnelle à Bordeaux.">
+	<meta name="twitter:image" content="./assets/images/nina.jpg">
+	<meta name="twitter:image:alt" content="Portrait de Nina Carducci, photographe professionnelle à Bordeaux" />
+	<meta name="twitter:site" content="@NinaCarducci" />
+	<meta name="twitter:creator" content="@NinaCarducci" />
 	<!-- Ajout attribut "defer" afin de charger les scripts en dernier -->
-	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 	<script src="./assets/maugallery.js" defer></script>
