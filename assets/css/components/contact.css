@@ -1,0 +1,51 @@
+/* Contact Section */
+#contact {
+	margin: auto;
+	background-color: #D8D3A8;
+	position: relative;
+	padding: 100px;
+}
+
+#contact .container {
+	display: flex;
+}
+
+.picture.right::before {
+	content: ' ';
+	background-color: #BEB45A;
+	width: 374px;
+	height: 329px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.form-container {
+	flex: 2;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	align-items: flex-start;
+}
+
+form input,
+form textarea {
+	width: 100%;
+	background-color: transparent;
+	border: solid 1px;
+	margin-bottom: 20px;
+}
+
+form input {
+	height: 2.5em;
+}
+
+form textarea {
+	height: 5em;
+	line-height: 2.5em;
+	font-size: 1.2em;
+}

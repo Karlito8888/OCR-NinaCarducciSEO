@@ -1,0 +1,83 @@
+/* Responsive Design */
+@media (max-width: 1180px) {
+	.picture {
+		flex: 2;
+	}
+	#about, #contact .container {
+		align-items: center;
+	}
+	.about-me__title {
+		margin: 0 0 1em;
+	}
+	#about-me h6,
+	#about-me p {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1000px) {
+	#about {
+		flex-direction: column;
+	}
+	.picture {
+		width: 50%;
+	}
+	.picture.left::before {
+		width: 100%;
+		height: 30%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.about-me__title {
+		text-align: center;
+		margin-top: 1em;
+	}
+	#services .container {
+		flex-direction: column;
+	}
+	.service {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	.tags-bar {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 768px) {
+	.top-header {
+		flex-direction: column;
+		padding: 10px;
+	}
+	.top-header .name {
+		font-size: 20px;
+	}
+	.top-header .nav {
+		flex-direction: column;
+	}
+	.top-header .nav li {
+		padding: 10px 0;
+	}
+	#about,
+	#contact {
+		padding: 20px;
+	}
+	#about-me,
+	#services .container,
+	#contact .container {
+		flex-direction: column;
+	}
+	.picture.left::before {
+		width: 100%;
+		height: 20%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.lightboxImage {
+		width: 100%;
+	}
+}

@@ -1,0 +1,49 @@
+/* About Section */
+#about {
+	display: flex;
+	background-color: #F6D2B8;
+	padding: 100px 100px;
+	position: relative;
+}
+
+#about .picture {
+	flex: 1;
+	margin: 0 20px;
+	position: relative;
+}
+
+.picture img {
+	width: 100%;
+}
+
+.picture.left::before {
+	content: ' ';
+	background-color: #E5975F;
+	width: 374px;
+	height: 329px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#about-me {
+	flex: 2;
+}
+
+.about-me__title {
+	margin: 1em 0 60px;
+	font-size: 30px;
+}
+
+.about-me__introduction {
+	font-family: 'Spectral', serif;
+	font-weight: 800;
+	font-style: italic;
+	width: 60%;
+}
+
+#about-me p {
+	width: 80%;
+	font-size: 14px;
+}

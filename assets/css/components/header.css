@@ -1,0 +1,30 @@
+/* Header */
+.top-header {
+	background-color: white;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 100px;
+	align-items: center;
+}
+
+.top-header .name {
+	font-size: 26px;
+}
+
+.top-header .nav {
+	display: flex;
+	list-style-type: none;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.top-header .nav li {
+	padding-inline: 10px;
+}
+
+.top-header .nav a {
+	color: #000;
+}
