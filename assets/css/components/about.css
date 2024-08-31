@@ -1,49 +1,63 @@
 /* About Section */
 #about {
-	display: flex;
-	background-color: #F6D2B8;
-	padding: 100px 100px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6d2b8;
+  padding: clamp(2rem, -2.25rem + 13.6vw, 6.25rem);
+  position: relative;
 }
 
+#about::before {
+  content: " ";
+  background-color: #e5975f;
+  height: clamp(9.375rem, -1.8125rem + 35.8vw, 20.5625rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 #about .picture {
-	flex: 1;
-	margin: 0 20px;
-	position: relative;
+  width: 100%;
+  max-width: 555px;
+  margin: 0 20px;
+  position: relative;
 }
 
-.picture img {
-	width: 100%;
-}
-
-.picture.left::before {
-	content: ' ';
-	background-color: #E5975F;
-	width: 374px;
-	height: 329px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-}
-
-#about-me {
-	flex: 2;
-}
+/* #about-me {
+  
+} */
 
 .about-me__title {
-	margin: 1em 0 60px;
-	font-size: 30px;
+  margin: 1em 0 60px;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .about-me__introduction {
-	font-family: 'Spectral', serif;
-	font-weight: 800;
-	font-style: italic;
-	width: 60%;
+  font-family: "Spectral", serif;
+  font-weight: 800;
+  font-style: italic;
+  position: relative;
 }
 
 #about-me p {
-	width: 80%;
-	font-size: 14px;
+  font-size: 14px;
+  position: relative;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 1000px) {
+	#about {
+  display: flex;
+  flex-direction: row;
+	}
+
+  #about::before {
+    width: 374px;
+	top: unset;
+    bottom: 0;
+  }
 }
