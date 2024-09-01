@@ -5,13 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- "preload" précharge le style avant que le navigateur n'ait besoin de l'appliquer. -->
-	<!-- as="style" indique que la ressource préchargée est une feuille de style. -->
-	<!-- onload="this.onload=null;this.rel='stylesheet'" modifie le rel en stylesheet une fois le fichier chargé -->
-	<link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="./assets/css/style.css">
-	</noscript>
+	<link rel="stylesheet" href="./assets/css/style.css" as="style">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -172,89 +166,25 @@
 		<section id="gallery">
 			<!-- Remplacer le h3 en h2 -->
 			<h2 class="title">Portfolio</h2>
-			<div class="container py-3">
-				<div class="gallery" style="display: none">
+			<div class="filters"></div>
+			<div class="gallery-container">
+				<div class="gallery-content">
 					<!-- Optimise le chargement des images avec l'attribut loading="lazy" pour différer le chargement des images. -->
 					<!-- Ajoute les "alt" sur chaque image afin d'améliorer l'accessibilité -->
-
-					<img src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" srcset="
-				      ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp 500w,
-				      ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-small.webp 250w,
-				      ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg 500w,
-				      ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Concert" class="gallery-item"
-						loading="lazy" alt="Photo illustrant une foule assistant à un concert">
-
-					<img src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" srcset="
-				      ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp 500w,
-				      ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-small.webp 250w,
-				      ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg 500w,
-				      ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Entreprises" class="gallery-item"
-						loading="lazy" alt="Photo illustrant un homme d'affaires croisant les bras">
-
-					<img src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" srcset="
-				      ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp 500w,
-				      ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-small.webp 250w,
-				      ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg 500w,
-				      ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Entreprises" class="gallery-item"
-						loading="lazy" alt="Photo illustrant deux femmes et collègues qui sourient">
-
-					<img src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" srcset="
-				      ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp 500w,
-				      ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-small.webp 250w,
-				      ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg 500w,
-				      ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Mariages" class="gallery-item"
-						loading="lazy" alt="Photo illustrant les bras d'un homme et d'une femme qui se rejoignent">
-
-					<img src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" srcset="
-				      ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp 500w,
-				      ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-small.webp 250w,
-				      ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg 500w,
-				      ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Portrait" class="gallery-item"
-						loading="lazy" alt="Photo illustrant un homme fermant les yeux face au soleil">
-
-					<img src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" srcset="
-				      ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp 500w,
-				      ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-small.webp 250w,
-				      ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg 500w,
-				      ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Mariages" class="gallery-item"
-						loading="lazy" alt="Photo illustrant un jeune couple marié">
-
-					<img src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" srcset="
-				      ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp 500w,
-				      ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-small.webp 250w,
-				      ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg 500w,
-				      ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Portrait" class="gallery-item"
-						loading="lazy" alt="Photo illustrant une jeune femme posant derrière un grillage">
-
-					<img src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" srcset="
-				      ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp 500w,
-				      ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-small.webp 250w,
-				      ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg 500w,
-				      ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Concert" class="gallery-item"
-						loading="lazy" alt="Photo illustrant un chanteur sur une scène de concert">
-
-					<img src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" srcset="
-				      ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp 500w,
-				      ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-small.webp 250w,
-				      ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg 500w,
-				      ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-small.jpg 250w"
-						sizes="(max-width: 768px) 250px, 500px" data-gallery-tag="Entreprises" class="gallery-item"
-						loading="lazy"
-						alt="Photo illustrant une jeune femme qui sourit devant son ordinateur de bureau">
 				</div>
 				<div class="modal" id="myAwesomeLightbox">
 					<div class="modal-content">
-						<span class="mg-prev">&lt;</span>
+						<button class="mg-prev"><svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z" />
+						</svg></button>
 						<img class="lightboxImage" alt="Image en mode lightbox" />
-						<span class="mg-next">&gt;</span>
+						<button class="mg-next"><svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z" />
+						</svg></button>
 					</div>
 				</div>
 
