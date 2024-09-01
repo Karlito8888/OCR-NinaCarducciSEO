@@ -1,7 +1,7 @@
 #header-carousel {
   width: 100%;
+  aspect-ratio: 16 / 9; 
   height: auto;
-  background-color: #F6D2B8;
   position: relative;
 }
 
@@ -27,7 +27,19 @@
 
 .carousel-item.active {
   display: block;
+  height: 100%;
   position: relative;
+}
+
+.carousel-item.active picture {
+  width: 100%;
+  min-height: 100%;
+}
+.carousel-item.active picture img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel-indicators {
