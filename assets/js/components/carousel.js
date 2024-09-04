@@ -9,11 +9,15 @@ export default function initCarousel() {
 
   let currentSlide = 0;
   const dots = [];
+  let slideInterval; // Variable pour stocker l'intervalle de changement automatique
 
   // On initialise les dots et les synchronise aux slides
   slides.forEach((slide, index) => {
     const dot = document.createElement("button");
-    dot.className = "dot" + (index === 0 ? " active" : ""); // Ajout de la classe active pour le premier dot
+    dot.className = "dot" + (index === 0 ? " active" : "");
+    dot.setAttribute("aria-label", `Slide ${index + 1}`);
+    dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+    dot.setAttribute("role", "button");
     dot.addEventListener("click", () => goToSlide(index));
     dotsContainer.appendChild(dot);
     dots.push(dot);
@@ -40,12 +44,28 @@ export default function initCarousel() {
   // Utiliser goToSlide pour les flèches
   arrowLeft.addEventListener("click", () => {
     goToSlide(currentSlide - 1);
+    resetSlideInterval(); // Réinitialiser l'intervalle lorsqu'on utilise les flèches
   });
 
   arrowRight.addEventListener("click", () => {
     goToSlide(currentSlide + 1);
+    resetSlideInterval(); // Réinitialiser l'intervalle lorsqu'on utilise les flèches
   });
+
+  // Fonction pour démarrer l'intervalle de changement automatique
+  function startSlideInterval() {
+    slideInterval = setInterval(() => {
+      goToSlide(currentSlide + 1);
+    }, 4000); // Changement toutes les 4 secondes
+  }
+
+  // Fonction pour réinitialiser l'intervalle de changement automatique
+  function resetSlideInterval() {
+    clearInterval(slideInterval);
+    startSlideInterval();
+  }
 
   // Initialisation du carousel
   updateCarousel();
+  startSlideInterval(); // Démarrer l'intervalle pour le changement automatique
 }

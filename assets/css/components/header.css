@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   padding-block: 30px;
   padding-inline: clamp(0.625rem, -4.7424rem + 17.1756vw, 6.25rem);
 }
