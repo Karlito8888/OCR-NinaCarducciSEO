@@ -18,6 +18,7 @@ export default function initCarousel() {
     dot.setAttribute("aria-label", `Slide ${index + 1}`);
     dot.setAttribute("aria-current", index === 0 ? "true" : "false");
     dot.setAttribute("role", "button");
+    dot.setAttribute("title", `Go to slide ${index + 1}`);
     dot.addEventListener("click", () => goToSlide(index));
     dotsContainer.appendChild(dot);
     dots.push(dot);
