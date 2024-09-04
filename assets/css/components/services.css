@@ -1,35 +1,108 @@
 /* Services Section */
 #services {
-	margin: auto;
-	background-color: #A8D5D8;
-	position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 20;
 }
 
 #services .container {
-	display: flex;
-	justify-content: space-between;
-	padding: 2em 0;
+	background-color: #a8d5d8;
+	display: grid;
+	padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
+	padding-bottom: 40px;
+  position: relative;
 }
 
 #services .container::before {
-	content: ' ';
-	background-color: #1C6474;
-	position: absolute;
-	width: 100%;
-	height: 30%;
-	bottom: 0;
-	left: 0;
-	z-index: 0;
+  content: " ";
+  background-color: #1c6474;
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
 }
 
+#services .container h2 {
+	z-index: 20;
+}
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  justify-items: center;
+}
 .service {
-	background-color: white;
-	max-width: 390px;
-	width: 30%;
+  background-color: white;
+  width: 100%;
+  max-width: 630px;
+  max-height: 337px;
+  padding-block: 1em;
+  padding-inline: clamp(1rem, -0.3333rem + 5.3333vw, 3rem);
+  display: grid;
+  gap: 20px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.service_photo {
+	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/camera.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.service_retouches {
+	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/retouches-photos.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.service_album {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/albums-photos.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.service__description {
+  height: auto;
+}
+.service__description p {
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.service__price {
+  display: grid;
+  height: auto;	
+  gap: 15px;
+  align-items: end;																																																																																									
+}
+
+.service__price span {
+	font-size: 13px;
+  }
+@media (min-width: 1000px) {
+  #services .container::before {
+    width: 100%;
+    height: 30%;
+	top: unset;
+    left: 0;
+    z-index: 0;
+  }
+  .services-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-content .service {
 	height: 337px;
-	padding: 1em;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	z-index: 1;
+  } 
+  .service {
+	padding-inline: clamp(1rem, -0.087rem + 1.7391vw, 2rem);
+  }
+  .service__price {
+  display: grid;
+  height: auto;	
+  gap: 0px;																																																																																									
+}
+
+  
 }

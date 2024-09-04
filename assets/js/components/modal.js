@@ -7,7 +7,7 @@ const initModal = () => {
   const galleryItems = document.querySelectorAll(".gallery-item");
   let currentImageIndex = 0;
 
-   modal.style.display = "none";
+  modal.style.display = "none";
 
   galleryItems.forEach((item, index) => {
     item.addEventListener("click", () => {

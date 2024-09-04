@@ -1,51 +1,89 @@
 /* Contact Section */
 #contact {
-	margin: auto;
-	background-color: #D8D3A8;
-	position: relative;
-	padding: 100px;
+  width: 100%;
+  height: auto;
+  background-color: #d8d3a8;
+  position: relative;
+  z-index: 20;
+  letter-spacing: 1px;
 }
 
+#contact::before {
+	display: none;
+  content: " ";
+  background-color: #beb45a;
+  width: 374px;
+  height: 329px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
 #contact .container {
-	display: flex;
-}
-
-.picture.right::before {
-	content: ' ';
-	background-color: #BEB45A;
-	width: 374px;
-	height: 329px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
+  padding-block: 40px;
+  z-index: 20;
 }
 
 .form-container {
-	flex: 2;
+  display: grid;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
-	width: 70%;
-	align-items: flex-start;
+	margin-top: 30px;
+  display: grid;
+  z-index: 20;
 }
 
 form input,
 form textarea {
-	width: 100%;
-	background-color: transparent;
-	border: solid 1px;
-	margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: solid 1px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  z-index: 20;
 }
 
 form input {
-	height: 2.5em;
+  height: 2.5em;
+  z-index: 20;
 }
 
 form textarea {
-	height: 5em;
-	line-height: 2.5em;
-	font-size: 1.2em;
+  height: 5em;
+  line-height: 2.5em;
+  font-size: 1.2em;
+  z-index: 20;
+}
+
+.contact-content {
+  z-index: 20;
+  display: grid;
+  align-content: center;
+  gap: 30px;
+}
+.contact-content h3 {
+  text-align: center;
+}
+.contact-content .address {
+	display: grid;
+	gap: 5px;
+}
+@media (min-width: 1000px) {
+	#contact::before {
+		display: block;
+	}
+  #contact .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
+  }
+  .contact-content {
+  padding-left: 20%;
+}
 }

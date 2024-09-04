@@ -6,11 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/css/style.css" as="style">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-		rel="stylesheet">
 	<!-- Ajoute un favicon pour améliorer l'expérience utilisateur -->
 	<link rel="icon" href="./assets/images/icon.png" type="image/png">
 	<!-- Ajout balise <title> et <meta name="description"> pour améliorer le référencement -->
@@ -38,6 +33,24 @@
 	<meta name="twitter:image:alt" content="Portrait de Nina Carducci, photographe professionnelle à Bordeaux" />
 	<meta name="twitter:site" content="@NinaCarducci" />
 	<meta name="twitter:creator" content="@NinaCarducci" />
+	<!-- Intégrer le script JSON-LD pour le référencement local -->
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Nina Carducci Photography",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "68 avenue Alsace-Lorraine",
+		    "addressLocality": "Bordeaux",
+		    "addressRegion": "Nouvelle-Aquitaine",
+		    "postalCode": "32000",
+		    "addressCountry": "FR"
+		  },
+		  "telephone": "+33-5-56-67-78-89",
+		  "openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00"
+		}
+	</script>
 	<!-- Ajout attribut "defer" afin de charger les scripts en dernier -->
 	<script type="module" src="./assets/js/index.js" defer></script>
 </head>
@@ -57,7 +70,7 @@
 				<li><a href="#contact">Contact</a></li>
 				<!-- Utilise rel="noopener noreferrer" sur les liens externes pour améliorer la sécurité -->
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"
-						rel="noopener noreferrer"><img src="assets/images/instagram.png"
+						rel="noopener noreferrer" itemprop="sameAs"><img src="assets/images/instagram.png"
 							alt="Logo du site instagram"></a></li>
 			</ul>
 		</nav>
@@ -112,18 +125,18 @@
 					</li>
 				</ul>
 				<div class="carousel-indicators"></div>
-				<button aria-label="Diapositive précédente" class="carousel-control-prev" type="button" data-slide="prev">
-					<svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" role="img"
-						aria-label="Chevron gauche">
+				<button aria-label="Diapositive précédente" class="carousel-control-prev" type="button"
+					data-slide="prev">
+					<svg class="carousel-control-prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+						role="img" aria-label="Chevron gauche">
 						<path fill="#ffffff"
 							d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
 					</svg>
 				</button>
 
 				<button aria-label="Diapositive suivante" class="carousel-control-next" type="button" data-slide="next">
-					<svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 320 512" role="img"
-						aria-label="Chevron droit">
+					<svg class="carousel-control-next-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+						role="img" aria-label="Chevron droit">
 						<path fill="#ffffff"
 							d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
 					</svg>
@@ -133,18 +146,19 @@
 		</section>
 
 		<!-- Remplacer la <div> en <section> -->
-		<section id="about">
+		<section id="about" itemscope itemtype="http://schema.org/Person">
 			<div class="picture-left">
 				<picture>
 					<source srcset="
 				        ./assets/images/nina.webp 600w,
 				        ./assets/images/nina-small.webp 300w" sizes="(max-width: 768px) 300px, 600px" type="image/webp">
-				
+
 					<source srcset="
 				        ./assets/images/nina.jpg 600w,
 				        ./assets/images/nina-small.jpg 300w" sizes="(max-width: 768px) 300px, 600px" type="image/jpeg">
-				
-					<img src="./assets/images/nina.jpg" alt="Photo illustrant la photographe Nina Carducci">
+
+					<img src="./assets/images/nina.jpg" alt="Photo illustrant la photographe Nina Carducci"
+						itemprop="image">
 				</picture>
 			</div>
 			<div id="about-me">
@@ -175,24 +189,24 @@
 				<div class="modal" id="myAwesomeLightbox">
 					<div class="modal-content">
 						<button class="mg-prev"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-							<path
-								d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z" />
-						</svg></button>
+								viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+								<path
+									d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z" />
+							</svg></button>
 						<img class="lightboxImage" alt="Image en mode lightbox" />
 						<button class="mg-next"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-							<path
-								d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z" />
-						</svg></button>
+								viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+								<path
+									d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z" />
+							</svg></button>
 					</div>
 				</div>
 
 
 			</div>
-			<div class="quote">
+			<div class="quote" itemscope itemtype="http://schema.org/CreativeWork">
 				<figure>
-					<blockquote>
+					<blockquote itemprop="text">
 						<!-- Remplacer la <h1> en <p> -->
 						<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
 							fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude
@@ -200,62 +214,70 @@
 							vérité.
 						</p>
 					</blockquote>
-					<figcaption class="quote__author">- Richard Avedon</figcaption>
+					<figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
 				</figure>
 			</div>
 		</section>
 		<!-- Remplacer la <div> en <section> -->
 		<section id="services">
-			<!-- Remplacer le h3 en h2 -->
-			<h2 class="title">Mes services</h2>
 			<div class="container">
+				<!-- Remplacer le h3 en h2 -->
+				<h2 class="title">Mes services</h2>
 				<!-- Remplacer la <div> en <article> -->
 				<!-- Ajout attributs aria-labelledby pour lier les descriptions et les prix aux titres des services. -->
-				<article class="service" aria-labelledby="service-photo">
-					<div class="service__description">
-						<h3 id="service-photo">Shooting photo</h3>
-						<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace
-							en Île-de-France pour réaliser vos photos</p>
-					</div>
-					<div class="service__price">
-						<h4>350€/demi journée</h4>
-						<span>Matériel, déplacement inclus</span>
-					</div>
+				<div class="services-content">
+					<article class="service service_photo" aria-labelledby="service-photo" itemscope
+						itemtype="https://schema.org/Offer">
+						<div class="service__description">
+							<h3 id="service-photo" itemprop="name">Shooting photo</h3>
+							<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me
+								déplace
+								en Île-de-France pour réaliser vos photos</p>
+						</div>
+						<div class="service__price">
+							<h4 itemprop="price">350€/demi journée</h4>
+							<span>Matériel, déplacement inclus</span>
+						</div>
 
-				</article>
-				<!-- Remplacer la <div> en <article> -->
-				<article class="service" aria-labelledby="service-retouches">
-					<div class="service__description">
-						<h3 id="service-retouches">Retouches</h3>
-						<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu
-							optimal pour vos publications</p>
-					</div>
-					<div class="service__price">
-						<h4>50€/photo</h4>
-						<span>2 AR par photo</span>
-					</div>
-				</article>
-				<!-- Remplacer la <div> en <article> -->
-				<article class="service" aria-labelledby="service-album">
-					<div class="service__description">
-						<h3 id="service-album">Album photos</h3>
-						<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers
-							un album photo personnalisé</p>
-					</div>
-					<div class="service__price">
-						<h4>400€ album A4</h4>
-						<span>30 pages recto/verso</span>
-					</div>
-				</article>
+					</article>
+					<!-- Remplacer la <div> en <article> -->
+					<article class="service service_retouches" aria-labelledby="service-retouches" itemscope
+						itemtype="https://schema.org/Offer">
+						<div class="service__description" itemprop="name">
+							<h3 id="service-retouches" itemscope itemtype="https://schema.org/Offer">Retouches</h3>
+							<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un
+								rendu
+								optimal pour vos publications</p>
+						</div>
+						<div class="service__price">
+							<h4 itemprop="price">50€/photo</h4>
+							<span>2 AR par photo</span>
+						</div>
+					</article>
+					<!-- Remplacer la <div> en <article> -->
+					<article class="service service_album" aria-labelledby="service-album" itemscope
+						itemtype="https://schema.org/Offer">
+						<div class="service__description">
+							<h3 id="service-album" itemprop="name">Album photos</h3>
+							<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à
+								travers
+								un album photo personnalisé</p>
+						</div>
+						<div class="service__price">
+							<h4 itemprop="price">400€ album A4</h4>
+							<span>30 pages recto/verso</span>
+						</div>
+					</article>
+				</div>
 			</div>
-			<div class="quote">
+			<div class="quote" itemscope itemtype="http://schema.org/CreativeWork">
 				<figure>
-					<blockquote>
+					<blockquote itemprop="text">
 						<!-- Remplacer la <h1> en <p> -->
 						<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression,
 							des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 					</blockquote>
-					<figcaption class="quote__author">- Richard Avedon</figcaption>
+					<figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
 				</figure>
 			</div>
 		</section>
@@ -265,8 +287,8 @@
 		<div id="contact">
 			<div class="container">
 				<div class="form-container">
-					<h3>Une question ? Une demande de devis ?</h3>
-					<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+					<h3>Une question ?<br>Une demande de devis ?</h3>
+					<p> N’hésitez pas à m’écrire !<br> Je vous répondrais en moins de 24 heures.</p>
 					<!-- Ajout attributs "for" dans les balises <label> pour améliorer l'accessibilité du formulaire. -->
 					<!-- Ajout attributs "aria-required" pour les utilisateurs de lecteurs
 						d'écran. -->
@@ -280,16 +302,14 @@
 						<input type="submit" value="Envoyer" />
 					</form>
 				</div>
-				<div class="picture right">
-					<!-- Optimise le chargement des images avec l'attribut loading="lazy" pour différer le chargement des images. -->
-					<!-- Ajoute les "alt" sur chaque image afin d'améliorer l'accessibilité -->
-
-					<img src="./assets/images/camera.jpg" srcset="
-				      ./assets/images/camera.webp 450w,
-				      ./assets/images/camera-small.webp 225w,
-				      ./assets/images/camera.jpg 450w,
-				      ./assets/images/camera-small.jpg 225w" sizes="(max-width: 768px) 225px, 450px" loading="lazy"
-						alt="Photo illustrant un appareil photo">
+				<div class="contact-content" itemscope itemtype="https://schema.org/Organization">
+					<span itemprop="name"><strong>Nina Carducci</strong></span>
+					<div class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+						<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>
+						<p><span itemprop="postalCode">33200, </span><span itemprop="addressLocality">Bordeaux</span></p>
+						<span itemprop="telephone">05 56 67 78 89</span>
+					</div>
+					<p>Je réponds au téléphone,<br>... du lundi au vendredi de 10h à 19h.</p>
 				</div>
 
 			</div>
