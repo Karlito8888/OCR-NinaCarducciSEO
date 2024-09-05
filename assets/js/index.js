@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarousel();
   generateFilters();
   generateGallery();
-  initModal(); // Assurez-vous que la fonction est appelée correctement
+  initModal();
 });

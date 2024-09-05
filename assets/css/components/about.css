@@ -87,7 +87,7 @@
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
   }
-  
+
   #about-me {
     height: auto;
     width: 85%;
@@ -95,7 +95,7 @@
     margin-top: clamp(0rem, -2.9899rem + 4.0541vw, 1.875rem);
   }
   .about-me__title {
-    margin-bottom: clamp(0.625rem, -1.3682rem + 2.7027vw, 1.875rem);;
+    margin-bottom: clamp(0.625rem, -1.3682rem + 2.7027vw, 1.875rem);
   }
   .about-me__introduction {
     width: 80%;

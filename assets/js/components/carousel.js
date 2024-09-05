@@ -2,14 +2,14 @@
 
 export default function initCarousel() {
   // On vise et on stocke ces éléments du DOM
-  const slides = document.querySelectorAll(".carousel-item"); // Sélection des diapositives
+  const slides = document.querySelectorAll(".carousel-item");
   const dotsContainer = document.querySelector(".carousel-indicators");
   const arrowLeft = document.querySelector(".carousel-control-prev");
   const arrowRight = document.querySelector(".carousel-control-next");
 
   let currentSlide = 0;
   const dots = [];
-  let slideInterval; // Variable pour stocker l'intervalle de changement automatique
+  let slideInterval;
 
   // On initialise les dots et les synchronise aux slides
   slides.forEach((slide, index) => {
@@ -38,26 +38,26 @@ export default function initCarousel() {
 
   // On met à jour l'index de currentSlide et appelle updateCarousel pour mettre à jour l'affichage.
   function goToSlide(index) {
-    currentSlide = (index + slides.length) % slides.length; // Gérer les débordements
+    currentSlide = (index + slides.length) % slides.length;
     updateCarousel();
   }
 
   // Utiliser goToSlide pour les flèches
   arrowLeft.addEventListener("click", () => {
     goToSlide(currentSlide - 1);
-    resetSlideInterval(); // Réinitialiser l'intervalle lorsqu'on utilise les flèches
+    resetSlideInterval();
   });
 
   arrowRight.addEventListener("click", () => {
     goToSlide(currentSlide + 1);
-    resetSlideInterval(); // Réinitialiser l'intervalle lorsqu'on utilise les flèches
+    resetSlideInterval();
   });
 
   // Fonction pour démarrer l'intervalle de changement automatique
   function startSlideInterval() {
     slideInterval = setInterval(() => {
       goToSlide(currentSlide + 1);
-    }, 4000); // Changement toutes les 4 secondes
+    }, 4000);
   }
 
   // Fonction pour réinitialiser l'intervalle de changement automatique

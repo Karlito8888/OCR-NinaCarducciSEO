@@ -9,7 +9,7 @@
 }
 
 #contact::before {
-	display: none;
+  display: none;
   content: " ";
   background-color: #beb45a;
   width: 374px;
@@ -33,7 +33,7 @@
 }
 
 form {
-	margin-top: 30px;
+  margin-top: 30px;
   display: grid;
   z-index: 20;
 }
@@ -72,19 +72,19 @@ form textarea {
   text-align: center;
 }
 .contact-content .address {
-	display: grid;
-	gap: 5px;
+  display: grid;
+  gap: 5px;
 }
 @media (min-width: 1000px) {
-	#contact::before {
-		display: block;
-	}
+  #contact::before {
+    display: block;
+  }
   #contact .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10%;
   }
   .contact-content {
-  padding-left: 20%;
-}
+    padding-left: 20%;
+  }
 }

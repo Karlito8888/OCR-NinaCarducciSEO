@@ -1,19 +1,19 @@
 /* Quote */
 .quote {
-	font-family: 'Spectral', serif;
-	font-style: italic;
-	padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
+  font-family: "Spectral", serif;
+  font-style: italic;
+  padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
 }
 
 .quote__text {
-	font-size: clamp(1.25rem, 0.6848rem + 1.8085vw, 2.3125rem);
-	font-weight: 300;
-	line-height: 1.2;
-	margin: 50px auto 20px;
+  font-size: clamp(1.25rem, 0.6848rem + 1.8085vw, 2.3125rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 50px auto 20px;
 }
 
 .quote__author {
-	font-weight: 800;
-	font-size: clamp(0.875rem, 0.609rem + 0.8511vw, 1.375rem);
-	margin-bottom: 40px;
+  font-weight: 800;
+  font-size: clamp(0.875rem, 0.609rem + 0.8511vw, 1.375rem);
+  margin-bottom: 40px;
 }

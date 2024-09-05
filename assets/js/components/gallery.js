@@ -159,8 +159,8 @@ export function generateFilters() {
 // Ajoutez un listener pour gérer les changements de taille d'écran
 window.addEventListener("resize", () => {
   const filtersContainer = document.querySelector(".filters");
-  filtersContainer.innerHTML = ""; // Réinitialiser les filtres
-  generateFilters(); // Regénérer les filtres en fonction de la taille d'écran
+  filtersContainer.innerHTML = "";
+  generateFilters();
 });
 
 // Fonction pour appliquer un filtre
@@ -173,10 +173,10 @@ function applyFilter(filter) {
     // Ajoute la classe d'animation pour les éléments affichés
     if (filter === "all" || itemTag === filter) {
       item.style.display = "block";
-      item.classList.add('animate'); // Ajoute la classe d'animation
+      item.classList.add("animate");
     } else {
       item.style.display = "none";
-      item.classList.remove('animate'); // Retire la classe d'animation
+      item.classList.remove("animate");
     }
   });
 }
@@ -198,7 +198,7 @@ export function generateGallery() {
     const img = document.createElement("img");
     img.src = item.src;
     img.setAttribute("data-gallery-tag", item.tag);
-    img.classList.add("gallery-item"); // Ajouter la classe pour l'animation
+    img.classList.add("gallery-item");
     img.loading = "lazy";
     img.alt = item.alt;
 
@@ -212,4 +212,3 @@ export function generateGallery() {
   // Assurer que tous les éléments sont visibles au chargement
   applyFilter("all");
 }
-

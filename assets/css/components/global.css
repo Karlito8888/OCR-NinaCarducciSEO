@@ -44,8 +44,10 @@ a {
   padding-block: clamp(2.8125rem, 2.1565rem + 2.0992vw, 3.5rem);
 }
 
-.title, h3, h4 {
-  font-family: 'Inter', sans-serif;
+.title,
+h3,
+h4 {
+  font-family: "Inter", sans-serif;
   font-weight: 200;
 }
 
@@ -68,14 +70,14 @@ input[type="submit"] {
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

@@ -6,10 +6,10 @@
 }
 
 #services .container {
-	background-color: #a8d5d8;
-	display: grid;
-	padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
-	padding-bottom: 40px;
+  background-color: #a8d5d8;
+  display: grid;
+  padding-inline: clamp(0.9375rem, -5.1144rem + 19.3662vw, 18.125rem);
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -25,7 +25,7 @@
 }
 
 #services .container h2 {
-	z-index: 20;
+  z-index: 20;
 }
 .services-content {
   display: grid;
@@ -47,19 +47,31 @@
 }
 
 .service_photo {
-	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/camera.jpg');
-	background-size: cover;
-	background-position: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/camera.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .service_retouches {
-	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/retouches-photos.jpg');
-	background-size: cover;
-	background-position: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/retouches-photos.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .service_album {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url('../../images/albums-photos.jpg');
-	background-size: cover;
-	background-position: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/albums-photos.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .service__description {
@@ -73,19 +85,19 @@
 
 .service__price {
   display: grid;
-  height: auto;	
+  height: auto;
   gap: 15px;
-  align-items: end;																																																																																									
+  align-items: end;
 }
 
 .service__price span {
-	font-size: 13px;
-  }
+  font-size: 13px;
+}
 @media (min-width: 1000px) {
   #services .container::before {
     width: 100%;
     height: 30%;
-	top: unset;
+    top: unset;
     left: 0;
     z-index: 0;
   }
@@ -93,16 +105,14 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .services-content .service {
-	height: 337px;
-  } 
+    height: 337px;
+  }
   .service {
-	padding-inline: clamp(1rem, -0.087rem + 1.7391vw, 2rem);
+    padding-inline: clamp(1rem, -0.087rem + 1.7391vw, 2rem);
   }
   .service__price {
-  display: grid;
-  height: auto;	
-  gap: 0px;																																																																																									
-}
-
-  
+    display: grid;
+    height: auto;
+    gap: 0px;
+  }
 }
