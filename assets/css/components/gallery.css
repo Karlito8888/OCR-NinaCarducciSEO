@@ -26,6 +26,11 @@
   background-color: #beb45a;
 }
 
+.filters img {
+  width: 18px;
+  height: 18px;
+}
+
 .gallery-container {
   display: flex;
   justify-content: center;
