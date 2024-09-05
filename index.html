@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/css/style.css" as="style">
 	<!-- Ajoute un favicon pour améliorer l'expérience utilisateur -->
-	<link rel="icon" href="./assets/images/icon.png" type="image/png">
+	<link rel="icon" href="./assets/images/icons/icon.png" type="image/png">
 	<!-- Ajout balise <title> et <meta name="description"> pour améliorer le référencement -->
 	<title>Nina Carducci, Photographe professionnelle à Bordeaux - Portfolio et Services</title>
 	<meta name="description"
@@ -70,7 +70,7 @@
 				<li><a href="#contact">Contact</a></li>
 				<!-- Utilise rel="noopener noreferrer" sur les liens externes pour améliorer la sécurité -->
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"
-						rel="noopener noreferrer" itemprop="sameAs"><img src="assets/images/instagram.png"
+						rel="noopener noreferrer" itemprop="sameAs"><img src="assets/images/icons/instagram.png"
 							alt="Logo du site instagram"></a></li>
 			</ul>
 		</nav>
@@ -186,28 +186,25 @@
 					<!-- Optimise le chargement des images avec l'attribut loading="lazy" pour différer le chargement des images. -->
 					<!-- Ajoute les "alt" sur chaque image afin d'améliorer l'accessibilité -->
 				</div>
-			<div class="modal" id="myAwesomeLightbox">
-				<div class="modal-content">
-					<button class="mg-prev" aria-label="Précédent" title="Image précédente">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-							<path
-								d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z" />
-						</svg>
-						<span class="sr-only">Précédent</span> <!-- Texte accessible pour les lecteurs d'écran -->
-					</button>
-					<img class="lightboxImage" alt="Image en mode lightbox" />
-					<button class="mg-next" aria-label="Suivant" title="Image suivante">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-							<path
-								d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z" />
-						</svg>
-						<span class="sr-only">Suivant</span> <!-- Texte accessible pour les lecteurs d'écran -->
-					</button>
+				<div class="modal" id="myAwesomeLightbox">
+					<div class="modal-content">
+						<button class="mg-prev" aria-label="Précédent" title="Image précédente">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+								<path
+									d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z" />
+							</svg>
+							<span class="sr-only">Précédent</span> <!-- Texte accessible pour les lecteurs d'écran -->
+						</button>
+						<img class="lightboxImage" alt="Image en mode lightbox" />
+						<button class="mg-next" aria-label="Suivant" title="Image suivante">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+								<path
+									d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z" />
+							</svg>
+							<span class="sr-only">Suivant</span> <!-- Texte accessible pour les lecteurs d'écran -->
+						</button>
+					</div>
 				</div>
-			</div>
-
-
-
 			</div>
 			<div class="quote" itemscope itemtype="http://schema.org/CreativeWork">
 				<figure>
@@ -311,7 +308,8 @@
 					<span itemprop="name"><strong>Nina Carducci</strong></span>
 					<div class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
 						<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>
-						<p><span itemprop="postalCode">33200, </span><span itemprop="addressLocality">Bordeaux</span></p>
+						<p><span itemprop="postalCode">33200, </span><span itemprop="addressLocality">Bordeaux</span>
+						</p>
 						<span itemprop="telephone">05 56 67 78 89</span>
 					</div>
 					<p>Je réponds au téléphone,<br>... du lundi au vendredi de 10h à 19h.</p>
