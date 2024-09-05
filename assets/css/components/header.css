@@ -39,6 +39,7 @@
 /* Social Links */
 .social-link img {
   width: clamp(0.875rem, 0.7557rem + 0.3817vw, 1rem);
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
