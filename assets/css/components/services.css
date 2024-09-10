@@ -51,7 +51,12 @@
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0.5)
     ),
-    url("../../images/camera.jpg");
+     image-set(
+      url("../../images/camera-225w.webp") 1x,
+      url("../../images/camera-450w.webp") 2x,
+      url("../../images/camera-225w.jpg") 1x,
+      url("../../images/camera-450w.jpg") 2x
+    );
   background-size: cover;
   background-position: center;
 }
@@ -60,7 +65,12 @@
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0.5)
     ),
-    url("../../images/retouches-photos.jpg");
+     image-set(
+      url("../../images/retouches-photos-225w.webp") 1x,
+      url("../../images/retouches-photos-450w.webp") 2x,
+      url("../../images/retouches-photos-225w.jpg") 1x,
+      url("../../images/retouches-photos-450w.jpg") 2x
+    );
   background-size: cover;
   background-position: center;
 }
@@ -69,7 +79,12 @@
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0.5)
     ),
-    url("../../images/albums-photos.jpg");
+    image-set(
+      url("../../images/albums-photos-225w.webp") 1x,
+      url("../../images/albums-photos-450w.webp") 2x,
+      url("../../images/albums-photos-225w.jpg") 1x,
+      url("../../images/albums-photos-450w.jpg") 2x
+    );
   background-size: cover;
   background-position: center;
 }
