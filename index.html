@@ -53,7 +53,8 @@
 		  "openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00",
 		  "currenciesAccepted": "EUR",
 		  "paymentAccepted": "Cash, Credit Card",
-          "priceRange": "50-400 €"
+          "priceRange": "50-400 €",
+		  "url": "https://ninacarducci.github.io/",
 		}
 	</script>
 	<!-- Ajout attribut "defer" afin de charger les scripts en dernier -->
@@ -69,10 +70,10 @@
 		<!-- Remplacer <div> par <nav>  -->
 		<nav class="nav" aria-label="Navigation principale">
 			<ul>
-				<li><a href="#about">À propos</a></li>
-				<li><a href="#gallery">Galerie</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about" itemprop="url">À propos</a></li>
+				<li><a href="#gallery" itemprop="url">Galerie</a></li>
+				<li><a href="#services" itemprop="url">Services</a></li>
+				<li><a href="#contact" itemprop="url">Contact</a></li>
 				<!-- Utilise rel="noopener noreferrer" sur les liens externes pour améliorer la sécurité -->
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"
 						rel="noopener noreferrer" itemprop="sameAs"><img src="assets/images/icons/instagram.png"
@@ -209,7 +210,7 @@
 			</div>
 			<div id="about-me">
 				<!-- Remplacer le h3 en h2 -->
-				<h2 class="about-me__title">A propos de moi</h2>
+				<h2 class="about-me__title" itemprop="description">A propos de moi</h2>
 				<!-- Remplacer le h6 en p -->
 				<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais
 					prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre
@@ -224,7 +225,7 @@
 		</section>
 
 		<!-- Remplacer la <div> en <section> -->
-		<section id="gallery">
+		<section id="gallery" itemscope itemtype="http://schema.org/CreativeWork">
 			<!-- Remplacer le h3 en h2 -->
 			<h2 class="title">Portfolio</h2>
 			<div class="filters"></div>
@@ -279,7 +280,7 @@
 						itemtype="https://schema.org/Offer">
 						<div class="service__description">
 							<h3 id="service-photo" itemprop="name">Shooting photo</h3>
-							<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me
+							<p itemprop="description">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me
 								déplace
 								en Île-de-France pour réaliser vos photos</p>
 						</div>
@@ -293,7 +294,7 @@
 						itemtype="https://schema.org/Offer">
 						<div class="service__description" itemprop="name">
 							<h3 id="service-retouches" itemscope itemtype="https://schema.org/Offer">Retouches</h3>
-							<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un
+							<p itemprop="description">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un
 								rendu
 								optimal pour vos publications</p>
 						</div>
@@ -307,7 +308,7 @@
 						itemtype="https://schema.org/Offer">
 						<div class="service__description">
 							<h3 id="service-album" itemprop="name">Album photos</h3>
-							<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à
+							<p itemprop="description">Partagez avec vos proches et vos clients les photos des moments partagés ensemble à
 								travers
 								un album photo personnalisé</p>
 						</div>
